@@ -1,0 +1,68 @@
+.nav {
+  /* border: 1px solid red; */
+  /* padding-left: 10%; */
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  height: 80px;
+  width: 100%;
+  margin-top: -1%;
+  align-items: center;
+  padding-top: 1%;
+  z-index: 10;
+  margin: auto;
+  /* position: fixed; */
+  /* position: sticky; */
+  overflow: hidden;
+}
+.container {
+  /* border: 1px solid red; */
+  padding-left: 15%;
+  padding-right: 10%;
+}
+.cart {
+  /* border: 1px solid blue; */
+  display: flex;
+  justify-content: space-between;
+  /* text-align: center; */
+  margin-top: 3%;
+}
+
+.desc {
+  border: 3px dotted green;
+  margin: auto;
+  margin-top: 1%;
+  height: 500px;
+  width: 80%;
+  z-index: 1;
+
+  text-align: center;
+}
+.bottom {
+  margin: auto;
+  margin-top: 2%;
+  height: 200px;
+  width: 80%;
+  text-align: center;
+}
+.cardBtn1 {
+  width: 100px;
+  height: 40px;
+  /* background-color: rgb(2, 2, 2); */
+  /* color: white; */
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  position: fixed;
+  text-decoration: none;
+  text-decoration: none;
+}
+.cardBtn {
+  width: 100px;
+  height: 40px;
+  background-color: rgb(2, 2, 2);
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  position: fixed;
+}
