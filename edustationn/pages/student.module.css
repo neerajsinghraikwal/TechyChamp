@@ -1,0 +1,83 @@
+.mainSt{
+ 
+    display: flex;
+    margin: auto;
+    margin-top: -8px;
+
+}
+.mainSt2{
+    width: 25%;
+    height: 700px;
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+  
+   background-color: rgb(231, 217, 235);
+   box-shadow: rgba(171, 118, 218, 0.35) 0px -50px 36px -28px inset;
+}
+.mainSt
+.mainSt3{
+    width: 75%;
+    height: 70px;
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgba(171, 118, 218, 0.35) 0px -50px 36px -28px inset;
+}
+
+.LinkA{
+      font-size: 20px;
+    cursor: pointer;
+   text-decoration: none;
+    color: black;
+    
+}
+.mainSt3>h4{
+    font-size: 20px;
+    font-weight: 500;
+
+}
+.mainSt3>h4:hover{
+    border-bottom: 2px solid black;
+    color: red;
+    cursor: pointer;
+    transition: 1s;
+    
+}
+.mainSt2>p{
+    font-size: 20px;
+
+}
+.mainStPro{
+width: 100%;
+height: 70px;
+/* border: 1px solid red; */
+text-align: center;
+background-color: rgb(255, 255, 255);
+box-shadow: rgba(171, 118, 218, 0.35) 0px -50px 36px -28px inset;
+
+}
+.mainSt4{
+    
+height: 600px;
+padding: 10px;
+}
+
+.mainSt4>img{
+    width: 55%;
+    height: 25%;
+    border-radius: 50%;
+padding: 10px;
+margin-left: 15%;
+
+}
+
+.mainSt4>p{
+
+}
+
+
+
