@@ -2,6 +2,7 @@ import React from "react";
 // import axios from 'axios'
 
 const Login = (meta) => {
+
   console.log(meta.name);
   return <div>hello</div>;
 };
@@ -19,4 +20,6 @@ export async function getStaticProps(context) {
   return {
     props: { data: { meta } },
   };
+
+
 }
