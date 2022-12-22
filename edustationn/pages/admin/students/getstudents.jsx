@@ -10,7 +10,7 @@ import {
 } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import Link from 'next/link'
+import Link from "next/link";
 const Getstudents = () => {
   const [student, setStudent] = useState([]);
 
@@ -31,7 +31,9 @@ const Getstudents = () => {
   }, []);
   return (
     <>
-        <Link href="/admin" ><Button  p={"10px"}>{"<"}</Button></Link>
+      <Link href="/admin">
+        <Button p={"10px"}>{"<"}</Button>
+      </Link>
       <TableContainer>
         <Table variant="striped" colorScheme="teal">
           <Thead>
@@ -44,7 +46,7 @@ const Getstudents = () => {
           </Thead>
           {student &&
             student.map((ele, i) => (
-              <Tbody>
+              <Tbody key={ele._id}>
                 <Tr>
                   <Td>{i + 1}</Td>
                   <Td>{ele.userName}</Td>
