@@ -4,7 +4,7 @@ import axios from 'axios'
 const Login = (meta) => {
 console.log(meta.name)
   return (
-    <div>hello</div>
+    <div> dev </div>
   )
 }
 
