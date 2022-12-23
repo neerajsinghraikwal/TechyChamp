@@ -21,7 +21,6 @@ export default function AssignmentPage() {
   const getData = async () => {
     let res = await fetch(`http://localhost:3000/api/getassignment`);
     let data = await res.json();
-    console.log(data);
     setData([...data]);
   };
 

@@ -2,6 +2,7 @@ import mongoose from "mongoose"
 
 const userSchema=mongoose.Schema({
     userName:{type:String},
+    img:{type:String},
     email:{type:String},
     password:{type:String},
     role:{type:String,enum:["student"],default:"student"}
