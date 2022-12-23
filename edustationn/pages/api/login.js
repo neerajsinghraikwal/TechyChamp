@@ -7,11 +7,10 @@ export default async function handler(req, res) {
   if(user){
     try{
         if(user.role==="admin"){
-          res.redirect(307,"/admin")
-          
+          res.status(200).json("admin")
         }
         else if(user.role==="student"){
-          res.status(200).json("Login  Success")
+          res.status(200).json("student")
         }
     }
     catch(err){
