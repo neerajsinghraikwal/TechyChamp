@@ -12,7 +12,7 @@ const addcourse = () => {
         title: title,
         body: body,
       };
-      console.log(payload)
+
       axios
         .post("http://localhost:3000/api/course", payload)
         .then((r) => {

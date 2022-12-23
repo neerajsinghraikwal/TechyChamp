@@ -26,13 +26,12 @@ const Login = () => {
        setFormData({...formData,[name]:value})
     }
 
-    // console.log(formData)
+
 
     const handleSubmit = (e) => {
         e.preventDefault()
         axios.post('http://localhost:3000/api/login', formData)
         .then(response => {
-          console.log(response.data);
           if(response.data.role === "admin"){
             Router.push(`/admin`)
           }else if(response.data.role === "student"){
@@ -100,7 +99,7 @@ export default Login;
 
 //     const info = await axios.get(`http://localhost:3000/api/login`)
 //     const meta = info.data
-//     console.log(meta.name)
+//
 
 //     return {
 //         props:{ data: {meta}}

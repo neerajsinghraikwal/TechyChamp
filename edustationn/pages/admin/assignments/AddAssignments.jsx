@@ -21,15 +21,7 @@ const addassignment = () => {
         body: body,
         valid:valid
       };
-      console.log(payload);
-      //   axios
-      //     .post("http://localhost:3000/api/course", payload)
-      //     .then((r) => {
-      //       console.log(r.data);
-      //     })
-      //     .catch((e) => {
-      //       console.log(e);
-      //     });
+
     }
   };
   return (
