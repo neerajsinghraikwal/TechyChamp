@@ -38,8 +38,10 @@ export default function AssignmentPage() {
         {data.map((AssignmentData) => (
           <Box className={styles.cart} key={AssignmentData._id}>
             <Text>{AssignmentData._id}</Text>
-            <Text textAlign={"start"}>{AssignmentData.title}</Text>
-            <Text>Valid Till :- {AssignmentData.valid}</Text>
+            <Text width={"200px"} textAlign={"start"}>
+              {AssignmentData.title}
+            </Text>
+            <Text ml={"20px"}>Valid Till :- {AssignmentData.valid}</Text>
             <Button className={styles.cardBtn1}>
               <Link
                 href={`/Assignment/${encodeURIComponent(AssignmentData._id)}`}
