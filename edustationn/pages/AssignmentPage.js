@@ -9,24 +9,40 @@ import {
   Text,
   Input,
   Button,
+  Textarea,
 } from "@chakra-ui/react";
 import styles from "../styles/Assignment.module.css";
+import { useEffect, useState } from "react";
 
 export default function AssignmentPage() {
+  // localhost:3000/api/getassignment
+  const [data, setData] = useState([]);
+
+  const getData = async () => {
+    let res = await fetch(`http://localhost:3000/api/getassignment`);
+    let data = await res.json();
+    console.log(data);
+    setData([...data]);
+  };
+
+  useEffect(() => {
+    getData();
+  }, []);
+
   return (
     <Box>
       <Box className={styles.nav}>
         <Heading>Assignment List </Heading>
       </Box>
       <Box className={styles.container}>
-        {getAssignmentData().map((AssignmentData) => (
-          <Box className={styles.cart} key={AssignmentData.id}>
-            <Text>{AssignmentData.id}</Text>
-            <Text textAlign={"start"}>{AssignmentData.name}</Text>
+        {data.map((AssignmentData) => (
+          <Box className={styles.cart} key={AssignmentData._id}>
+            <Text>{AssignmentData._id}</Text>
+            <Text textAlign={"start"}>{AssignmentData.title}</Text>
             <Text>Valid Till :- {AssignmentData.valid}</Text>
             <Button className={styles.cardBtn1}>
               <Link
-                href={`/Assignment/${encodeURIComponent(AssignmentData.name)}`}
+                href={`/Assignment/${encodeURIComponent(AssignmentData._id)}`}
               >
                 Show
               </Link>
