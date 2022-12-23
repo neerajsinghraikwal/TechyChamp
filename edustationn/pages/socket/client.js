@@ -1,7 +1,7 @@
 // import React,{ useState, useEffect } from "react";
 
-// // import io from 'socket.io-client'
-// // let socket;
+// import io from 'socket.io-client'
+// let socket;
 // import style from "./client.module.css";
 
 
@@ -19,7 +19,7 @@
 //   function handlechange(e){
 // SetName(e.target.value);
 //     console.log(name)
-//     // socket.emit('input-change', e.target.value)
+//     socket.emit('input-change', e.target.value)
 //   }
 
 //   return (
@@ -47,6 +47,9 @@
 
 import React, { useState, useEffect } from 'react'
 import socketIOClient from 'socket.io-client'
+import style from "./client.module.css"
+import student from "../studentnav"
+
 
 const ENDPOINT = 'http://localhost:3000'
 
@@ -76,19 +79,33 @@ const ENDPOINT = 'http://localhost:3000'
   }
 
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
-        <label>
-          Message:
-          <input type="text" value={value} onChange={handleChange} />
-        </label>
-        <input type="submit" value="Send" />
-      </form>
-      {messages.map((message, index) => (
-        <p key={index}>{message}</p>
-      ))}
-    </div>
+    <div className={style.mainS} >
+      <student/>
+          <p>Discussion</p>
+          <div>
+          {messages.map((message, index) => (
+         <p key={index}>{message}</p>
+       ))}
+          </div>
+          <div className={style.mainSt} >
+           <form onSubmit={handleSubmit} className={style.mainForm}>
+             
+              <div className={style.mainInput}>
+              <input
+                type="text"
+                value={value}
+                placeholder="Write Something..."
+                onChange={handleChange}
+              />
+              </div> 
+    
+              <input type="submit" value="Send" />
+            </form>
+   
+          </div>
+        </div>
+
   )
 }
 
-// export default Chat
+

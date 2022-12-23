@@ -1,8 +1,12 @@
 import style from "./student.module.css";
 import Link from "next/link";
-
+import { Router } from "next/router";
 
 export default function StudentNav(){
+
+const handleclick=()=>{
+Router.push("/")
+}
 
 return (
 <div className={style.mainSt}>
@@ -22,8 +26,8 @@ return (
     </div>
       <div className={style.mainSt3}>
 <Link href="./assignment" className={style.LinkA}>Assignment </Link>
-<Link href="./discussion" className={style.LinkA}>Descussion </Link>
-<h4>Logout</h4>
+<Link href="./socket/client" className={style.LinkA}>Descussion </Link>
+ <h4 onClick={handleclick} >Logout</h4>
 
     </div>
    
