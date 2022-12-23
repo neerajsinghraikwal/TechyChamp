@@ -28,9 +28,18 @@ const Login = () => {
 
     // console.log(formData)
 
-    const handleSubmit = async(e) => {
+    const handleSubmit = (e) => {
         e.preventDefault()
-        const res = await axios.post("http://localhost:3000/api/login",formData)
+        axios.post('http://localhost:3000/api/login', formData)
+        .then(response => {
+          console.log(response.data);
+          if(response){
+            Router.push("/signup")
+          }
+        })
+        .catch(error => {
+          console.log(error);
+        });
         
     }
      
@@ -53,7 +62,7 @@ const Login = () => {
         >
           <Box w="70%" h="60%" m="auto" mt={"20%"} p={"30px"} bgColor="white">
             <Heading textAlign={"center"} fontSize="40px">Sigin</Heading>
-            <form action="submit">
+            <form action="submit" onSubmit={handleSubmit}>
               <FormControl isRequired mt={"30px"}>
                 <FormLabel>Email</FormLabel>
                 <Input type="email" placeholder="Enter Email" bg={"white"} name="email" onChange={handleChange}></Input>
