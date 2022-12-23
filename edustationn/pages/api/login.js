@@ -1,16 +1,29 @@
-// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
-
-import userModel from "../../models/user";
-import connectToMongo from "../../utils/mongodb";
-
-
+import connection from "../../server/config/database";
+import UserModel from "../../server/models/user";
 export default async function handler(req, res) {
-    await connectToMongo();
-    console.log("connected to Mongo")
+  const {email,password}=req.body;
+  await connection()
+  let user =await UserModel.findOne({email,password})
+  if(user){
     try{
-      const data = await userModel.find({});
-      res.status(200).json("data")
-    }catch(err){
-      res.status(401).json(err)
+        if(user.role==="admin"){
+          res.status(200).json("admin")
+        }
+        else if(user.role==="student"){
+          res.status(200).json("student")
+        }
     }
+    catch(err){
+      console.log(" err is ")
+      console.log(err)
+      res.status(400).json("Login Failed")
+    }
+  }
+  else{
+    res.status(400).json({"err":"Login Failed"})
+  }
+
+
 }
+
+

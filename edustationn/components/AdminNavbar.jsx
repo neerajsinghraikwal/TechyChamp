@@ -14,7 +14,9 @@ const AdminNavbar = () => {
       <Button onClick={() => router.push("/admin/course/addcourse")}>
         Courses
       </Button>
-      <Button>Assignments</Button>
+      <Link href="/admin/assignments">
+        <Button>Assignments</Button>
+      </Link>
     </>
   );
 };
