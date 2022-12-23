@@ -30,7 +30,7 @@ const Signup = () => {
     axios
       .post("http://localhost:3000/api/adduser", formData)
       .then((response) => {
-        console.log(response.data);
+
         if (response) {
           Router.push("/login");
         }
