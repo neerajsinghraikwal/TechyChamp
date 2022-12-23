@@ -10,7 +10,7 @@ import {
   HStack,
   Input,
 } from "@chakra-ui/react";
-import image from "../assests/download.jpeg";
+import Router from 'next/router';
 
 let init={
     email:"",
@@ -33,14 +33,15 @@ const Login = () => {
         axios.post('http://localhost:3000/api/login', formData)
         .then(response => {
           console.log(response.data);
-          if(response){
-            Router.push("/signup")
+          if(response.data === "admin"){
+            Router.push("/admin")
+          }else if(response.data === "student"){
+            Router.push("/studentnav")
           }
         })
         .catch(error => {
           console.log(error);
         });
-        
     }
      
 
