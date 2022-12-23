@@ -1,0 +1,38 @@
+.mainS>p {
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.mainSt {
+    width: 80%;
+    margin: auto;
+    margin-top: 40%;
+    /* border: 1px solid red; */
+}
+
+.mainInput>input {
+    width: 60rem;
+    height: 7vh;
+    border-bottom: 1px solid rgb(133, 133, 133);
+}
+.mainInput>input:focus{
+    outline: none;
+
+}
+.mainForm {
+    display: flex;
+    justify-content: space-around;
+    
+}
+.mainForm>input{
+    width: 8rem;
+    background-color: rgb(155, 255, 255);
+    font-size: 20px;
+    padding: auto;
+    font-weight: 500;
+    cursor: pointer;
+}
+.mainForm>input:hover{
+    background-color: rgb(92, 209, 209);
+}
