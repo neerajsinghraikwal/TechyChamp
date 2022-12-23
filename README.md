@@ -3,13 +3,13 @@
 simple education system ...........
 
 # Team
-  Neeraj singh
+  [Neeraj singh](https://github.com/neerajsinghraikwal)
   
-  Kanhaiya chauhan
+  [Kanhaiya chauhan](https://github.com/KanhaiyaChauhan037)
   
-  Aashish chaudhari
+  [Aashish chaudhari](https://github.com/AshishChaudhary3639)
   
-  Lokesh Ahire
+  [Lokesh Ahire](https://github.com/lokeshahire)
   
 
 # Login page
