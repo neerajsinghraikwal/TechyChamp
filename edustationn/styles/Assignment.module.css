@@ -1,6 +1,4 @@
 .nav {
-  /* border: 1px solid red; */
-  /* padding-left: 10%; */
   box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
     rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
   height: 80px;
@@ -10,9 +8,8 @@
   padding-top: 1%;
   z-index: 10;
   margin: auto;
-  /* position: fixed; */
-  /* position: sticky; */
   overflow: hidden;
+  text-align: center;
 }
 .container {
   /* border: 1px solid red; */
