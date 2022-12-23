@@ -72,6 +72,7 @@ const ENDPOINT = 'http://localhost:3000'
     event.preventDefault()
     socket.emit('sendMessage', value)
     setValue('')
+    console.log(value)
   }
 
   return (

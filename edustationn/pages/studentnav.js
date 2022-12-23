@@ -1,14 +1,6 @@
 import style from "./student.module.css";
 import Link from "next/link";
-import {
-    Menu,
-    MenuButton,
-    MenuList,
-    MenuItem,
-   Button,
-    MenuGroup,MenuDivider
-   
-} from "@chakra-ui/react"
+
 
 export default function StudentNav(){
 
@@ -21,10 +13,10 @@ return (
 
      <img src="https://thumbs.dreamstime.com/z/portfolio-management-businessman-hologram-concept-futuristic-portfolio-management-businessman-hologram-concept-177205308.jpg"/>
   
-        <h4>name:- Kanhaiya chauhan</h4>
-        <h4>name:- Kanhaiya</h4>
-        <h4>name:- Kanhaiya</h4>
-        <h4>name:- kanhaiya</h4>
+        <h4>name:-</h4>
+        <h4>name:- </h4>
+        <h4>name:- </h4>
+        <h4>name:- </h4>
         </div> 
         
     </div>
