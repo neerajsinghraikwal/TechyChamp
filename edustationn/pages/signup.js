@@ -9,6 +9,7 @@ import {
 } from "@chakra-ui/react";
 import Router from "next/router";
 import axios from "axios";
+import Link from "next/link";
 // import { headers } from "../next.config";
 
 let init = {
@@ -111,6 +112,19 @@ const Signup = () => {
             >
               Signup
             </Button>
+            <Link href="/login">
+              <Button
+                type="submit"
+                colorScheme={"rgb(20, 154, 250)"}
+                bgColor="blue"
+                color={"white"}
+                display={"block"}
+                m={"auto"}
+                mt="30px"
+              >
+                Signin
+              </Button>
+            </Link>
           </form>
         </Box>
       </Box>
