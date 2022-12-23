@@ -33,10 +33,10 @@ const Login = () => {
         axios.post('http://localhost:3000/api/login', formData)
         .then(response => {
           console.log(response.data);
-          if(response.data === "admin"){
-            Router.push("/admin")
-          }else if(response.data === "student"){
-            Router.push("/studentnav")
+          if(response.data.role === "admin"){
+            Router.push(`/admin`)
+          }else if(response.data.role === "student"){
+            Router.push(`/studentnav/${response.data._id}`)
           }
         })
         .catch(error => {
