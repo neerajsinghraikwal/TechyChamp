@@ -7,10 +7,10 @@ export default async function handler(req, res) {
   if(user){
     try{
         if(user.role==="admin"){
-          res.status(200).json("admin")
+          res.status(200).json(user)
         }
         else if(user.role==="student"){
-          res.status(200).json("student")
+          res.status(200).json(user)
         }
     }
     catch(err){

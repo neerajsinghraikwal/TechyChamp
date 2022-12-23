@@ -7,41 +7,38 @@ import {
   Heading,
   Input,
 } from "@chakra-ui/react";
-import Router from 'next/router';
+import Router from "next/router";
 import axios from "axios";
 // import { headers } from "../next.config";
 
-let init={
-    name:"",
-    email:"",
-    password:""
-}
-
+let init = {
+  name: "",
+  email: "",
+  password: "",
+};
 
 const Signup = () => {
+  const [formData, setFormData] = useState(init);
 
-    const [formData, setFormData] = useState(init)
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
 
-    const handleChange = (e) => {
-       const {name,value} = e.target
-       setFormData({...formData,[name]:value})
-    }
-
-
-    const handleSubmit = async(e) => {
-        e.preventDefault()
-        axios.post('http://localhost:3000/api/adduser', formData)
-        .then(response => {
-          console.log(response.data);
-          if(response){
-            Router.push("/login")
-          }
-        })
-        .catch(error => {
-          console.log(error);
-        });
-    }
-
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    axios
+      .post("http://localhost:3000/api/adduser", formData)
+      .then((response) => {
+        console.log(response.data);
+        if (response) {
+          Router.push("/login");
+        }
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
 
   return (
     <>
@@ -51,16 +48,24 @@ const Signup = () => {
         bgImage="url('https://img.freepik.com/free-photo/close-up-hand-taking-notes_23-2148888827.jpg?size=626&ext=jpg')"
         bgPosition="center"
         bgRepeat="no-repeat"
-        position= "relative"
+        position="relative"
         bgSize={"cover"}
         border="1px solid black"
       >
-        <Box w="35%" h="80%" m="auto" p={"30px"} mt="5%" bgColor="white" borderRadius={"5%"}>
+        <Box
+          w="35%"
+          h="80%"
+          m="auto"
+          p={"30px"}
+          mt="5%"
+          bgColor="white"
+          borderRadius={"5%"}
+        >
           {/* <Heading textAlign={"center"} fontSize="40px">
             Signup
           </Heading> */}
           <form action="submit" method="POST" onSubmit={handleSubmit}>
-            <FormControl isRequired mt={"30px"} >
+            <FormControl isRequired mt={"30px"}>
               <FormLabel>Name</FormLabel>
               <Input
                 type="text"
@@ -93,6 +98,7 @@ const Signup = () => {
                 onChange={handleChange}
               ></Input>
             </FormControl>
+
             <Button
               // onClick={handleSubmit}
               type="submit"
