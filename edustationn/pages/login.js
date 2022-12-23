@@ -33,9 +33,9 @@ const Login = () => {
         axios.post('http://localhost:3000/api/login', formData)
         .then(response => {
           if(response.data.role === "admin"){
-            Router.push(`/admin`)
+            Router.push(`/admin/?id=${response.data._id}`)
           }else if(response.data.role === "student"){
-            Router.push(`/studentnav/${response.data._id}`)
+            Router.push(`/studentnav/?id=${response.data._id}`)
           }
         })
         .catch(error => {
